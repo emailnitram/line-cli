@@ -15,7 +15,7 @@ Paste this into your project's `CLAUDE.md`, `AGENTS.md`, or system prompt to giv
 
 ### Setup (if not already done)
 ```bash
-go install github.com/emailnitram/line-cli@latest
+curl -fsSL https://raw.githubusercontent.com/emailnitram/line-cli/main/install.sh | sh
 line config set --token YOUR_ACCESS_TOKEN
 ```
 
@@ -58,6 +58,13 @@ line message push --to USER_ID --file /tmp/msg.json
 
 ## Installation
 
+### curl (macOS, Linux, CI, Claude Code sandboxes)
+```bash
+curl -fsSL https://raw.githubusercontent.com/emailnitram/line-cli/main/install.sh | sh
+```
+
+Detects your OS and architecture automatically. Installs to `/usr/local/bin` (or `~/.local/bin` if permissions require it). No Go or Homebrew needed.
+
 ### Homebrew (macOS/Linux)
 ```bash
 brew install emailnitram/tap/line-cli
@@ -66,14 +73,6 @@ brew install emailnitram/tap/line-cli
 ### Go install
 ```bash
 go install github.com/emailnitram/line-cli@latest
-```
-
-### Download binary
-Download the latest binary for your platform from [Releases](https://github.com/emailnitram/line-cli/releases), then move it to your PATH:
-```bash
-# macOS (Apple Silicon)
-curl -L https://github.com/emailnitram/line-cli/releases/latest/download/line-darwin-arm64 -o /usr/local/bin/line
-chmod +x /usr/local/bin/line
 ```
 
 ## Authentication

@@ -8,7 +8,7 @@ compile and `./line` to test commands locally.
 `line` is a CLI for the LINE Messaging API. Install and configure it once:
 
 ```bash
-go install github.com/emailnitram/line-cli@latest
+curl -fsSL https://raw.githubusercontent.com/emailnitram/line-cli/main/install.sh | sh
 line config set --token YOUR_ACCESS_TOKEN
 ```
 
