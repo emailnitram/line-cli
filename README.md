@@ -117,6 +117,18 @@ line message quota                                     # Get monthly quota and u
 line message loading --chat-id USER_ID --seconds 5    # Show loading animation
 ```
 
+### LIFF
+```bash
+line liff list
+line liff create --url https://example.com/liff --type full
+line liff create --file liff.json                           # Full config from file
+line liff update --id LIFF_ID --url https://example.com/v2
+line liff update --id LIFF_ID --type tall
+line liff delete --id LIFF_ID
+```
+
+**View types:** `compact` (50% screen height), `tall` (80%), `full` (100%)
+
 ### Profile
 ```bash
 line profile get --user-id USER_ID

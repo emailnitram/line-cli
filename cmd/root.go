@@ -36,4 +36,5 @@ func init() {
 	rootCmd.AddCommand(couponCmd)
 	rootCmd.AddCommand(orderCmd)
 	rootCmd.AddCommand(groupCmd)
+	rootCmd.AddCommand(liffCmd)
 }
