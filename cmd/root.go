@@ -10,7 +10,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "line",
 	Short: "LINE API CLI",
-	Long:  "A CLI for the LINE Messaging API, LINE Login, and LINE Shopping API.",
+	Long:  "A CLI for the LINE Messaging API and LINE Login.",
 }
 
 func SetVersion(v string) {
@@ -34,7 +34,6 @@ func init() {
 	rootCmd.AddCommand(webhookCmd)
 	rootCmd.AddCommand(audienceCmd)
 	rootCmd.AddCommand(couponCmd)
-	rootCmd.AddCommand(orderCmd)
-	rootCmd.AddCommand(groupCmd)
+rootCmd.AddCommand(groupCmd)
 	rootCmd.AddCommand(liffCmd)
 }

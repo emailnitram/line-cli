@@ -1,6 +1,6 @@
 # line-cli
 
-A command-line interface for the [LINE Messaging API](https://developers.line.biz/en/reference/messaging-api/), LINE Login, and LINE Shopping API.
+A command-line interface for the [LINE Messaging API](https://developers.line.biz/en/reference/messaging-api/) and LINE Login.
 
 Designed to be used by humans and AI agents (Claude Code, Codex, etc.) alike.
 
@@ -30,7 +30,6 @@ line richmenu upload-image --id ID --file img.png      # Upload image (auto-resi
 line webhook get                                        # Get current webhook URL
 line webhook set --url https://...                     # Set webhook URL
 line coupon list                                        # List coupons
-line order get --order-no NO                           # Get order details
 line --help                                            # Full command list
 line COMMAND --help                                    # Help for a specific command
 ```
@@ -50,7 +49,6 @@ line message push --to USER_ID --file /tmp/msg.json
 
 ### Notes
 - Credentials are stored in ~/.line-cli/config.yaml
-- LINE Shopping API commands (line order ...) require --api-key set via line config set
 - Rich menu images are auto-resized and compressed — any image file works
 ````
 
@@ -87,9 +85,6 @@ line config set --token YOUR_ACCESS_TOKEN
 line config set --client-id YOUR_CLIENT_ID --client-secret YOUR_CLIENT_SECRET
 line token issue
 line config set --token THE_TOKEN_FROM_ABOVE
-
-# For LINE Shopping API
-line config set --api-key YOUR_API_KEY
 
 # Check what's saved
 line config show
@@ -182,14 +177,6 @@ line coupon send --id COUPON_ID --to USER_ID          # Send to specific user
 line group members --group-id GROUP_ID
 line group member-profile --group-id GROUP_ID --user-id USER_ID
 line group leave --group-id GROUP_ID
-```
-
-### Order (LINE Shopping)
-```bash
-line order get --order-no ORDER_NO
-line order mark-paid --order-no ORDER_NO
-line order mark-shipped --order-no ORDER_NO
-line order tracking --order-no ORDER_NO --tracking-no TRACKING_NO
 ```
 
 ## JSON file format

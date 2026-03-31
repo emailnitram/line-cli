@@ -32,7 +32,6 @@ line richmenu upload-image --id RICHMENU_ID --file image.png   # auto-resizes
 line webhook get
 line webhook set --url https://...
 line coupon list
-line order get --order-no ORDER_NO
 ```
 
 ### Discovering commands
